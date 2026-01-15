@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0,
+maximum-scale=1.0,
+user-scalable=no,
+viewport-fit=cover">
+
 <title>PDF</title>
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <style>
 body {
@@ -15,39 +22,44 @@ body {
   background: #f2f2f7;
 }
 
-iframe {
-  width: 100%;
-  height: calc(100vh - 60px);
-  border: none;
-}
-
-button {
+.header {
   height: 60px;
-  width: 100%;
-  font-size: 18px;
-  border: none;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
   background: #007aff;
   color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.content {
+  height: calc(100vh - 60px);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 </style>
-
 </head>
 
 <body>
 
-<iframe id="pdfFrame"></iframe>
+<div class="header" onclick="history.back()">
+⬅ Zurück
+</div>
 
-<button onclick="history.back()">⬅ Zurück</button>
+<div class="content" id="content">
+</div>
 
 <script>
 const params = new URLSearchParams(window.location.search);
 const pdf = params.get("pdf");
 
 if (pdf) {
-  document.getElementById("pdfFrame").src = "pdf/" + pdf;
+  // PDF DIREKT einbinden (kein iframe!)
+  document.getElementById("content").innerHTML =
+    `<embed src="pdf/${pdf}" type="application/pdf" width="100%" height="100%">`;
 }
 </script>
 
 </body>
 </html>
-
