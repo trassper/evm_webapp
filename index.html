@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVM Algorithmen</title>
+
+<style>
+body {
+  font-family: -apple-system, sans-serif;
+  background: #ffffff;
+  padding: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 18px;
+  margin: 8px 0;
+  font-size: 18px;
+  border-radius: 12px;
+  border: none;
+  background: #005ea8;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<h2>EVM Algorithmen</h2>
+
+<button onclick="openPDF('basisalgorithmus.pdf')">Basisalgorithmus</button>
+<button onclick="openPDF('basisalgorithmus_trauma.pdf')">Basisalgorithmus Trauma</button>
+<button onclick="openPDF('akutes_koronarsyndrom.pdf')">Akutes Koronarsyndrom</button>
+<button onclick="openPDF('linksherzinsuffizienz_dyspnoe.pdf')">Linksherzinsuffizienz mit Dyspnoe</button>
+<button onclick="openPDF('bradykardie.pdf')">Bradykardie</button>
+<button onclick="openPDF('hypertensiver_notfall.pdf')">Hypertensiver Notfall</button>
+<button onclick="openPDF('obstruktive_atemwegserkrankung_erwachsen.pdf')">Obstruktive Atemwegserkrankung Erwachsener</button>
+<button onclick="openPDF('obstruktive_atemwegserkrankung_kind.pdf')">Obstruktive Atemwegserkrankung Kind</button>
+<button onclick="openPDF('extrapulmonale_atemwegserkrankung.pdf')">Extrapulmonale Atemwegserkrankung</button>
+<button onclick="openPDF('hypoglykaemie.pdf')">Hypoglykämie</button>
+<button onclick="openPDF('anaphylaxie.pdf')">Anaphylaktische Reaktion</button>
+<button onclick="openPDF('status_epilepticus.pdf')">Status epilepticus</button>
+<button onclick="openPDF('schlaganfall.pdf')">Schlaganfall</button>
+<button onclick="openPDF('reanimation.pdf')">Reanimation</button>
+<button onclick="openPDF('geburt.pdf')">Geburt</button>
+<button onclick="openPDF('rosc.pdf')">ROSC</button>
+<button onclick="openPDF('abdomineller_schmerz.pdf')">Abdomineller Schmerz</button>
+<button onclick="openPDF('traumatischer_schmerz.pdf')">Traumatischer Schmerz</button>
+<button onclick="openPDF('thorakaler_schmerz.pdf')">Thorakaler Schmerz</button>
+<button onclick="openPDF('rueckenschmerzen.pdf')">Rückenschmerzen</button>
+<button onclick="openPDF('starke_uebelkeit.pdf')">Starke Übelkeit</button>
+<button onclick="openPDF('sepsis.pdf')">Sepsis</button>
+<button onclick="openPDF('kohlenmonoxidvergiftung.pdf')">CO-Vergiftung</button>
+<button onclick="openPDF('thoraxentlastungspunktion.pdf')">Thoraxentlastungspunktion</button>
+<button onclick="openPDF('aufziehanleitung.pdf')">Aufziehanleitung</button>
+
+<script>
+function openPDF(file) {
+  location.href = "viewer.html?pdf=" + file;
+}
+</script>
+
+</body>
+</html>
